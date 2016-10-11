@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <title>slider</title>
+  <style>
+body
+{
+background-color: #222222;
+font-size: 24px;
+color: white;
+
+}
+  </style>
+<script type="text/javascript">
+
+var numer = Math.floor(Math.random()*5)+1;
+
+function zmienslajd()
+{
+numer++; if(numer>5)numer=1;
+
+//var plik = "<img scr=\"/Users/lukaszrichter/1.png\"/>";
+
+var plik = "<img scr=\"/Users/lukaszrichter/n" + numer + ".png\"/>";
+
+document.getElementById("slider").innerHTML = plik;
+
+setTimeout("zmienslajd()", 5000);
+
+}
+</script>
+
+</head>
+<body onload="zmienslajd()">
+
+  <div id="slider"></div>
+
+</body>
+</html>
